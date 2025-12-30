@@ -22,7 +22,7 @@ preston track https://github.com/globalbioticinteractions/nomer/issues
 
 After tracking the issues, each issue and their associated comment is available in json format. 
 
-The example below prints the content associated with [issue #1](https://github.com/globalbioticinteractions/nomer/issues/1) of [Global Biotic Interactions](https://github.com/globalbioticinteractions/nomer) using preston, grep and jq.
+The example below prints the content associated with [issue #1](https://github.com/globalbioticinteractions/nomer/issues/1) of [Nomer](https://github.com/globalbioticinteractions/nomer) using preston, grep and jq.
 
 ```
 preston head \
