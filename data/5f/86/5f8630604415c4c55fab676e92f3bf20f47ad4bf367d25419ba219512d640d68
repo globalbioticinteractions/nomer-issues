@@ -1,0 +1,4 @@
+providedExternalId	providedName	providedAuthorship	providedRank	relationName	resolvedExternalId	resolvedName	resolvedAuthorship	resolvedRank
+https://www.discoverlife.org/mp/20q?search=Acamptopoeum+argentinum	Acamptopoeum argentinum	(Friese, 1906)	species	HAS_ACCEPTED_NAME	https://www.discoverlife.org/mp/20q?search=Acamptopoeum+argentinum	Acamptopoeum argentinum	(Friese, 1906)	species
+https://www.discoverlife.org/mp/20q?search=Acamptopoeum+calchaqui	Acamptopoeum calchaqui	Compagnucci, 2004	species	HAS_ACCEPTED_NAME	https://www.discoverlife.org/mp/20q?search=Acamptopoeum+calchaqui	Acamptopoeum calchaqui	Compagnucci, 2004	species
+https://www.discoverlife.org/mp/20q?search=Acamptopoeum+colombiense	Acamptopoeum colombiense	Shinn, 1965	species	HAS_ACCEPTED_NAME	https://www.discoverlife.org/mp/20q?search=Acamptopoeum+colombiense	Acamptopoeum colombiense	Shinn, 1965	species

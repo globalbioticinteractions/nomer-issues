@@ -1,0 +1,40 @@
+import pandas as pd
+import time
+import sys
+import os
+from pynomer.client import NomerClient
+import threading
+
+df = pd.read_csv("taxons.csv")
+
+
+def pynomer_append(df, thread_name):
+    client = NomerClient(base_url="http://localhost:8180/")
+    start_time = time.time()
+    for index, row in df.iterrows():
+        result = client.append(
+            query="\t{}".format(row["consumer_name"]),
+            matcher="globi-taxon-cache",
+            p=None,
+            o="tsv",
+        )
+        # print(row["consumer_name"], result)
+    print("{0} execution time : {1:.2f}".format(thread_name, time.time() - start_time))
+
+
+start_time = time.time()
+try:
+    thread_list = []
+    for i in range(8):
+        t = threading.Thread(
+            target=pynomer_append, args=(df.head(50), f"pynomer-thread-{i}")
+        )
+        thread_list.append(t)
+    for t in thread_list:
+        t.start()
+    for t in thread_list:
+        t.join()
+
+except Exception as e:
+    print(f"Error: unable to start thread : {e}")
+print("Execution time : {0:.2f}".format(time.time() - start_time))
